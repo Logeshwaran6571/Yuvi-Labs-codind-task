@@ -23,9 +23,9 @@ class Main
         int x = in.nextInt();
 
         System.out.print("\n Array with" + x + "highlighted\n");
-        head(n);
+        headside(n);
         hits = showMark(m, x);
-        edge(n);
+        edgeside(n);
 
         System.out.print("\n\nNumber of " + x + " appeared " + hits + " time(s)");
     }
