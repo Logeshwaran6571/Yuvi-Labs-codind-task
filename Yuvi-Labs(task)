@@ -1,8 +1,9 @@
 import java.util.*;
 
-class Main {
-
-    public static void main(String[] args) {
+class Main
+{
+    public static void main(String[] args)
+    {
         Scanner in = new Scanner(System.in);
         Random rnd = new Random();
 
@@ -14,9 +15,9 @@ class Main {
         int[][] m = make(n, rnd);
 
         System.out.println("Generated 2D array: ");
-        head(n);
+        headside(n);
         show(m);
-        edge(n);
+        edgeside(n);
 
         System.out.println("\nEnter a number to highlight (even 2-20): ");
         int x = in.nextInt();
@@ -29,7 +30,8 @@ class Main {
         System.out.print("\n\nNumber of " + x + " appeared " + hits + " time(s)");
     }
 
-    private static int[][] make(int n, Random r) {
+    static int[][] make(int n, Random r)
+    {
         int[][] g = new int[n][n];
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
@@ -37,21 +39,24 @@ class Main {
         return g;
     }
 
-    private static void head(int n) {
+    static void headside(int n) 
+    {
         System.out.print("    ");
         for (int c = 0; c < n; c++)
             System.out.print("  0" + c + " ");
         System.out.println();
     }
 
-    private static void edge(int n) {
+    static void edgeside(int n) 
+    {
         System.out.print("    ");
         for (int i = 0; i < n; i++)
             System.out.print("+----");
         System.out.print("+");
     }
 
-    private static void show(int[][] g) {
+    static void show(int[][] g)
+    {
         int n = g.length;
         for (int i = 0; i < n; i++) {
             System.out.print("    ");
@@ -66,7 +71,8 @@ class Main {
         }
     }
 
-    private static int showMark(int[][] g, int x) {
+    static int showMark(int[][] g, int x) 
+    {
         int n = g.length;
         int cnt = 0;
         for (int i = 0; i < n; i++) {
